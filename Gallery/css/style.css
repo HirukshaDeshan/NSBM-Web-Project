@@ -1,0 +1,100 @@
+body
+{
+	margin: 0;
+	padding: 0;
+
+} 
+.container h2
+{
+	text-align: center ;
+	height: auto;
+	width: 100%;
+	font-size: 100px;
+}
+.container p
+{
+	text-align: center ;
+	height: auto;
+	width: 100%;
+	font-size: 150px;
+}
+.container .gallery
+{
+	height: auto;
+	width: 100%;
+	display: grid;
+    grid-template:"ifr ifr ifr ifr ifr" 33.33vh 
+                  "ifr ifr ifr ifr ifr" 33.33vh
+                  "ifr ifr ifr ifr ifr" 33.33vh
+                  "ifr ifr ifr ifr ifr" 33.33vh 
+                  "ifr ifr ifr ifr ifr" 33.33vh;
+	grid-auto-flow: dense;
+    grid-gap:40px; 	
+
+}
+
+.container .gallery .box
+{
+	position:relative;
+	color: #ccc;
+	transition: 0.5s
+}
+.container .gallery .box:hover
+{
+ 	transform: scale(1.03);
+}
+.container .gallery .box img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container .gallery .box.a
+{
+	grid-column: span 3;
+}
+.container .gallery .box.c
+{
+	grid-row: span 2;
+}
+.container .gallery .box.d
+{
+	grid-row: span 2;
+}
+
+.container .gallery .box.f
+{
+	grid-column: span 2;
+}
+.container .gallery .box.g
+{
+	grid-row: span 2;
+	grid-column: span 2;
+}
+.container .gallery .box.h
+{
+	grid-column: span 2;
+}
+
+.container .gallery .box.j
+{
+	grid-column: span 3;
+}
+.container .gallery .box.l
+{
+	grid-row:span 2; 
+}
+@media screen and (max-width:960px)
+{
+	.container .gallery 
+	{
+		grid-template:"ifr ifr  "250px 
+                      "ifr ifr  "250px
+                      "ifr ifr  "250px
+                      "ifr ifr  "250px 
+                      "ifr ifr  "250px;
+	}
+}
